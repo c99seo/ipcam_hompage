@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <!-- <script src="default.js"></script> -->
+    <SCRIPT>
+        window.onload = function () {
+            console.log("tab7 Page");
+        }
+    </SCRIPT>
+
+    <style>
+        .wrapper {
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            margin:10px;            
+          }
+          #switch {
+            position: absolute;
+            /* hidden */
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+          }
+          
+          .switch_label {
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            width: 48px;
+            height: 20px;
+            background: #fff;
+            border: 2px solid #daa;
+            border-radius: 20px;
+            transition: 0.2s;
+          }
+          .switch_label:hover {
+            background: #efefef;
+          }
+          .onf_btn {
+            position: absolute;
+            top: 4px;
+            left: 3px;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: #daa;
+            transition: 0.2s;
+          }
+          
+          /* checking style */
+          #switch:checked+.switch_label {
+            background: #c44;
+            border: 2px solid #c44;
+          }
+          
+          #switch:checked+.switch_label:hover {
+            background: #e55;
+          }
+          
+          /* move */
+          #switch:checked+.switch_label .onf_btn {
+            left: 34px;
+            background: #fff;
+            box-shadow: 1px 2px 3px #00000020;
+          }
+    </style>
+    <title>recording management</title>
+</head>
+
+<body>
+    <div id="note" name="note"></div>
+    <!-- ====================== 9 ======================================================= -->
+    <input type="hidden" name="pageName" value="content9">
+    
+    <br>
+    <div style="font-weight:bold;">* 이벤트 관리</div>
+    <div style="font-weight:bold;">* 민감도 설정</div>
+
+    <form name="Userinfo" id="Userinfo">
+        <table width=600>
+            <tr>
+                <td align=left width=100>민감도</td>
+                <td align=left width=100>
+                    <select size="1" style=width:200px;>
+                        <option value="insensitive">둔감</option>
+                        <option value="normal" selected>보통</option>
+                        <option value="sensitive">민감</option>
+                        <option value="very sensitive">매우민감</option>
+                    </select>
+                </td>
+                <td align=center colspan="2"><button class="button" type="button" id="userSaveBt">적용</button></td>
+            </tr>
+        </table>
+
+        <br>
+        <div style="font-weight:bold;">* 이벤트 감지 구역</div>
+        <table>
+            <tr>
+                <td align=left width=100>구역별 감지</td>
+                <td align=left width=240>
+                    <div class="wrapper">
+                        <input type="checkbox" id="switch">
+                        <label for="switch" class="switch_label">
+                          <span class="onf_btn"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

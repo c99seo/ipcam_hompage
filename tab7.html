@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <!-- <script src="default.js"></script> -->
+    <SCRIPT>
+        window.onload = function () {
+            console.log("tab7 Page");
+        }
+    </SCRIPT>
+
+    <title>recording management</title>
+</head>
+
+<body>
+    <div id="note" name="note"></div>
+    <!-- ====================== 9 ======================================================= -->
+    <input type="hidden" name="pageName" value="content9">
+    
+    <br>
+    <div style="font-weight:bold;">* SD카드 녹화 관리</div>
+    <div style="font-weight:bold;">* SD카드 정보</div>
+
+    <form name="Userinfo" id="Userinfo">
+        <table width=600>
+            <tr>
+                <td align=center width=120>상태</td>
+                <td align=left width=80>SD카드 없음</td>
+                <td align=left width=80><button class="button" type="button" id="format">포맷</button></td>
+            </tr>
+
+            <tr>
+                <td align=center width=120>전체크기</td>
+                <td align=left width=120>-</td>
+            </tr>
+        </table>
+
+        <br>
+        <div style="font-weight:bold;">* 녹화 설정</div>
+        <table>
+            <tr>
+                <td align=center width=120>녹화</td>
+                <td align=left width=240>
+                    <input id="record1" type="radio" name="record" value="1" onclick="javascript:displayView(this);">
+                    <label for="record1">사용함</label>
+                    <input id="record0" type="radio" name="record" value="0" checked="checked" onclick="javascript:displayView(this);">
+                    <label for="record0">사용안함</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td align=center width=120>녹화품질</td>
+                <td align=left width=120>
+                    <select size="1">
+                        <option value="HD" selected>HD</option>
+                        <option value="SD">SD</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align=center width=120>녹화시간</td>
+                <td align=left width=120>
+                    <select size="1">
+                        <option value="5">5분</option>
+                        <option value="10">10분</option>
+                        <option value="15">15분</option>
+                        <option value="30" selected>30분</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+
+        <br>
+        <div style="font-weight:bold;">* 녹화 일정표</div>
+            <table>
+                <tr>
+                    <td align=center width=120>녹화선택</td>
+                    <td align=left width=240>
+                        <select size="1">
+                            <option value="normal" selected>일반녹화</option>
+                            <option value="event">이벤트녹화</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        
+        <br>
+        <td align=center colspan="2"><button class="button" type="button" id="userSaveBt">적용</button></td>
+
+    </form>
+</body>
+
+</html>

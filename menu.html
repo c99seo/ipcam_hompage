@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- <script type="text/javascript"></script> -->
+    <!-- <script src="default.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="menu.css">
+
+</head>
+
+<script>
+    var currentValue = 0;
+
+    function handleClick(tabs) {
+        //alert('Old value: ' + currentValue + '   New value: ' + tabs.value);
+        //alert('New value: ' + tabs.value);
+        //currentValue = tabs.value;
+
+        //$(divElmnt.html($(this).find('.content').html()));
+        //var radio_btn = window.top.frames["body"].document.getElementsByName("tabs");
+
+
+        //		document.getElementById('body1').contentWindow.location = 'infor1.html';
+        //		document.getElementById('body1').src = 'infor1.html';
+        //		document.getElementsByName('body')[0].src = 'infor1.html';
+
+        if (tabs.id != undefined || tabs.id != null || tabs.id != "") {
+            console.log(tabs.id);
+            console.log(tabs.id + '.html');
+
+            parent.body.location = tabs.id + '.html';
+        } else {
+            parent.body.location = 'tab1.html';
+        }
+
+
+        /*
+        var radio_btn_check = 0;
+        for(var i = 0; i<radio_btn.length; i++){
+
+        if(radio_btn[i].checked==true){
+        alert(radio_btn[i].value);
+        radio_btn_check++;
+        }	
+        }
+        */
+    }
+</script>
+
+<body>
+    <div class="main">
+        <!-- <input id="tab1" type="radio" name="tabs" onclick="handleClick(this);" value="1" checked> -->
+        <!--디폴트 메뉴-->
+        <input id="tab0">
+        <label for="tab0" style="color:#000; font-weight:bold;">메뉴</label>
+        <br>
+        <br>
+        <input id="tab1" type="radio" name="tabs" onclick="handleClick(this);" value="1" checked>
+        <label for="tab1" type="radio" name="tabs" style="margin-left:10px; color:#000;">카메라정보</label>
+        <br>
+        <br>
+        
+
+        <ul class="menu1">
+            <li style="margin-left:10px;">
+                네트워크 관리
+                <ul class="submenu">
+                    <li><input id="tab3" type="radio" name="tabs" onclick="handleClick(this);" value="3">
+                        <label for="tab3" style=color:#000;>- 네트워크 설정</label>
+                    </li>
+
+                    <li><input id="tab3_1" type="radio" name="tabs" onclick="handleClick(this);" value="3.1">
+                        <label for="tab3_1" style=color:#000;>- 무선 설정</label>
+                    </li>
+
+                    <li><input id="tab3_2" type="radio" name="tabs" onclick="handleClick(this);" value="3.2">
+                        <label for="tab3_2" style=color:#000;>- DDNS 설정</label>
+                    </li>
+
+                    <li><input id="tab3_3" type="radio" name="tabs" value="3.3">
+                        <label for="tab3_3" style=color:#000;>- 외부 접속 관리</li>
+
+                </ul>
+            </li>
+        </ul>
+        <br>
+
+        <ul class="menu2">
+            <li style="margin-left:10px;">
+                카메라 관리
+                <ul class="submenu">
+                    <li><input id="tab5" type="radio" name="tabs" onclick="handleClick(this);" value="5">
+                        <label for="tab5" style="margin-left:10px; color:#000;">- 카메라 설정</label>
+                    </li>
+
+                    <li><input id="tab5_1" type="radio" name="tabs" onclick="handleClick(this);" value="5.1">
+                        <label for="tab5_1" style="margin-left:10px; color:#000;">- RTSP 설정</label>
+                    </li>
+
+                    <li><input id="tab5_2" type="radio" name="tabs" onclick="handleClick(this);" value="5.2">
+                        <label for="tab5_2" style="margin-left:10px; color:#000;">- 시스템 설정</label>
+                    </li>
+
+                    <li><input id="tab5_3" type="radio" name="tabs" onclick="handleClick(this);" value="5.3">
+                        <label for="tab5_3" style="margin-left:10px; color:#000;">- 시스템 로그</label></li>
+
+                    <li><input id="tab5_4" type="radio" name="tabs" value="5.4">
+                        <label for="tab5_4" style="margin-left:10px; color:#000;">- 펌웨어 업그레이드</label></li>
+
+                </ul>
+            </li>
+        </ul>
+        <br>
+        
+
+        <ul class="menu3">
+            <li style="margin-left:10px;">
+                녹화/이벤트 관리
+                <ul class="submenu">
+                    <li><input id="tab7" type="radio" name="tabs" onclick="handleClick(this);" value="7">
+                        <label for="tab7" style="margin-left:10px; color:#000;">- SD카드 녹화 관리</label>
+                    </li>
+
+                    <li><input id="tab7_1" type="radio" name="tabs" onclick="handleClick(this);" value="7.1">
+                        <label for="tab7_1" style="margin-left:10px; color:#000;">- 이벤트 관리</label></li>
+
+                    <li><input id="tab7_2" type="radio" name="tabs" value="7.2">
+                        <label for="tab7_2" style="margin-left:10px; color:#000;">- NAS 녹화 관리</label></li>
+
+                </ul>
+            </li>
+        </ul>
+        <br>
+
+        <input id="tab9" type="radio" name="tabs" onclick="handleClick(this);" value="9">
+        <label for="tab9" style="margin-left:10px; color:#000;">라이브</label>
+        <br>
+        <br>
+        <input id="tab11" type="radio" name="tabs" value="11">
+        <label for="tab11" style="margin-left:10px; color:#000;">SD카드 재생</label>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <!-- <script src="default.js"></script> -->
+    <SCRIPT>
+        window.onload = function () {
+            console.log("tab3 Page");
+        }
+    </SCRIPT>
+
+    <title>networksetting</title>
+</head>
+
+<body>
+    <div id="note" name="note"></div>
+    <!-- ====================== 3 ======================================================= -->
+    <input type="hidden" name="pageName" value="content3">
+    <br>
+    <div style="font-weight:bold;">* DDNS 설정</div>
+    
+    <!--  -->
+    <form id="network" name="network">
+        <table width=600>
+            <tr>
+                <td align=center width=140>서비스 공급자</td>
+                <td> <input placeholder="ipTIME DDNS" name="Rssid" id="Rssid" style="width:250px" required></td>
+            </tr>
+
+            <tr>
+                <td align=center width=140>호스트 이름</td>
+                <td> <input placeholder="sjtech" name="Rssid" id="Rssid" style="width:250px" required>.iptimecam.com</td>
+            </tr>
+
+            <tr>
+                <td align=center width=140>사용자 이메일</td>
+                <td> <input placeholder="" name="Rssid" id="Rssid" style="width:250px" required></td>
+            </tr>
+
+            <tr>
+                <td align=center><input type="submit" value="DDNS 등록"></td>
+            </tr>
+        </table>
+
+        <br>
+        <div style="font-weight:bold;">* 호스트 이름</div>
+
+        <table width=600>
+            <tr>
+                <!-- <td><input id="dhcp1" type="radio" name="dhcp" value="1" onclick="javascript:displayView(this);">
+                    <label for="dhcp1">DHCP 사용함</label>
+                    <input id="dhcp0" type="radio" name="dhcp" value="0" onclick="javascript:displayView(this);">
+                    <label for="dhcp0">DHCP 사용 안함</label></td> -->
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>

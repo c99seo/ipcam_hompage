@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <script src="practice.js"></script>
+    <SCRIPT>
+        window.onload = function () {
+            console.log("tab5 Page");
+        }
+    </SCRIPT>
+
+    <title>camera setting</title>
+</head>
+
+<body>
+    <div id="note" name="note"></div>
+    <!-- ====================== 9 ======================================================= -->
+    <input type="hidden" name="pageName" value="content9">
+
+    <br>
+    <div style="font-weight:bold;">* 카메라 설정</div>
+    <div style="font-weight:bold;">* 스트림 설정</div>
+
+    <form name="Userinfo" id="Userinfo">
+        <table width=600>
+            <tr>
+                <td align=center width=120></td>
+                <td align=left width=80>HD 스트림</td>
+                <td align=left width=80>SD 스트림</td>
+            </tr>
+
+            <tr>
+                <td align=center width=120>해상도</td>
+                <td align=left width=120>
+                <select size="1">
+                    <option value="1080p">1080p</option>
+                    <option value="720p" selected>720p</option>
+                </select>
+                </td>
+
+                <td align=left width=120>
+                    <select size="1">
+                        <option value="VGA" selected>VGA</option>
+                        <option value="360p">360p</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align=center width=120>비트율</td>
+                <td align=left width=120>
+                    <select size="1">
+                        <option value="1024Kbps">1024Kbps</option>
+                        <option value="512Kbps">512Kbps</option>
+                        <option value="256Kbps">256Kbps</option>
+                        <option value="128Kbps" selected>128Kbps</option>
+                    </select>
+                </td>
+
+                <td align=left width=120>
+                    <select size="1">
+                        <option value="256Kbps">256Kbps</option>
+                        <option value="128Kbps" selected>128Kbps</option>
+                        <option value="64Kbps">64Kbps</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align=center width=120>초당 프레임</td>
+                <td align=left width=120>
+                    <select size="1">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15" selected>15</option>
+                        <option value="20" >20</option>
+                    </select>
+                </td>
+
+                <td align=left width=120>
+                    <select size="1">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15" selected>15</option>
+                        <option value="20" >20</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        
+        <br>
+        <td align=center colspan="2"><button class="button" type="button"  id="userSaveBt">저장</button></td>
+
+    </form>
+</body>
+
+</html>

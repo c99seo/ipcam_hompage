@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <!-- <script src="default.js"></script> -->
+    <SCRIPT>
+        window.onload = function () {
+            console.log("tab9 Page");
+        }
+    </SCRIPT>
+
+    <title>Live</title>
+</head>
+
+<body>
+    <link href="video-js.css" rel="stylesheet">
+
+    <script src="video.js"></script>
+
+    <script src="videojs-flash.js"></script>
+
+    <script src="videojs-contrib-hls.js"></script>
+
+
+
+    <div id="note" name="note"></div>
+    <!-- ====================== 9 ======================================================= -->
+    <input type="hidden" name="pageName" value="content9">
+
+    <br>
+    <div style="font-weight:bold;">* 라이브</div>
+    <br>
+
+    <script>
+        var player = vidojs('hlsPlayEx');
+        player.play();
+    </script>
+
+    <video id="example_video_1" class="video-js vjs-default-skin" controls autoplay width="500" height="300"
+        data-setup="{}">
+
+        <source src="http://192.168.1.92/make_html/x36xhzz/x36xhzz.m3u8" type="application/x-mpegURL">
+
+    </video>
+
+    <!-- <div id="frame" style="background:black; height:500px;">
+
+        <div class="message">
+            <span style="color:red; font-size:large;">영상</span>
+        </div>
+    </div> -->
+
+</body>
+
+</html>

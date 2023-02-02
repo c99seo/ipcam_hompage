@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <!-- <script src="default.js"></script> -->
+
+    <script type="text/javascript">
+        function showClock(){
+            var currentDate = new Date();
+            var divClock = document.getElementById('divClock');
+            var msg = "";
+            msg += currentDate.getFullYear()+"-";
+            msg += currentDate.getMonth()+1+"-";
+            msg += currentDate.getDate()+" ";
+            msg += currentDate.getHours()+":";
+            msg += currentDate.getMinutes()+":";
+            msg += currentDate.getSeconds();
+            divClock.innerText = msg;
+     
+            if (currentDate.getMinutes()>58) {    //정각 1분전부터 빨강색으로 출력
+              divClock.style.color="red";
+            }
+            setTimeout(showClock,1000);  //1초마다 갱신
+          }
+    </script>
+
+    <SCRIPT>
+        window.onload = function () {
+            console.log("tab1 Page");
+        }
+    </SCRIPT>
+
+    <title>CameraInfo</title>
+</head>
+
+<body onload="showClock()">
+    <div id="note" name="note"></div>
+    <!-- ====================== 1 ======================================================= -->
+    <input type="hidden" name="pageName" value="content1">
+    <br>
+    <div style="font-weight:bold;">* 카메라 정보</div>
+    <div style="font-weight:bold;">* 기본 정보</div>
+
+    <table width=600>
+        <tr>
+            <td align=center width=120>카메라 이름 </td>
+            <td> <span id="ssid">iptimeCam</span></td>
+        </tr>
+        <tr>
+            <td align=center width=120>모델명 </td>
+            <td> <span id="local">C200</span></td>
+        </tr>
+        <tr>
+            <td align=center width=120>펌웨어 버전</td>
+            <td> <span id="subnet">1.082 (2022-05-09 16:30:40)</span></td>
+        </tr>
+        <tr>
+            <td align=center>시스템 시간</td>
+            <td> 
+                <div id="divClock" class="clock">
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align=center>시스템 동작 시간</td>
+            <td> <span id="dns">0</span></td>
+        </tr>
+        <!-- <tr>
+            <td align=center>MAC</td>
+            <td> <span id="mac">0</span></td>
+        </tr> -->
+    </table>
+    
+    <br>
+    <div style="font-weight:bold;">* 네트워크 정보</div>
+    <table width=600>
+        <tr>
+            <td align=center width=120>연결 모드</td>
+            <td><span id="vurl">유선</span></td>
+        </tr>
+        <tr>
+            <td align=center>IP 주소</td>
+            <td><span id="vcycle">192.168.1.82 (자동)</span></td>
+        </tr>
+        <tr>
+            <td align=center>MAC 주소</td>
+            <td><span id="wifi">70:5D:CC:9B:73:22 (유선) | 70:5D:CC:9B:73:23 (무선)</span></td>
+        </tr>
+        <tr>
+            <td align=center>RTSP 내부 주소</td>
+            <td><span id="wifi">HD 스트림: rtsp://192.168.1.82:554/stream_ch00_0<br>
+                SD 스트림: rtsp://192.168.1.82:554/stream_ch00_1</span></td>
+        </tr>
+        <tr>
+            <td align=center>RTSP 외부 주소</td>
+            <td><span id="wifi">HD 스트림: rtsp://sjtech.iptimecam.com:21164/stream_ch00_0<br>
+                SD 스트림: rtsp://sjtech.iptimecam.com:21164/stream_ch00_1</span></td>
+        </tr>
+    </table>
+
+    <!-- <BR>* 고객정보
+    <table width=600>
+        <tr>
+            <td align=center width=120>장비 고유 ID</td>
+            <td> <span id="vuserid">0</span></td>
+        </tr>
+        <tr>
+            <td align=center width=120>고객번호</td>
+            <td width=480><span id="vuserno">0</span></td>
+        </tr>
+        <tr>
+            <td align=center width=120>고객명</td>
+            <td width=480><span id="vuser">0</span></td>
+        </tr>
+        <tr>
+            <td align=center width=120>전화번호</td>
+            <td width=480> <span id="vtel">0</span></td>
+        </tr>
+        <tr>
+            <td align=center width=120>지역</td>
+            <td width=480><span id="varea">0</span>
+        </tr>
+        <tr>
+            <td align=center width=120>비고</td>
+            <td width=480><span id="vmemo">0</span></td>
+        </tr>
+    </table> -->
+    <BR>
+    <!-- &nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="button" id="s_db_reset">DB 초기화</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="button" id="idButton" onclick="window.location.reload();">새로 고침</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="button" id="check">디바이스 확인</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="button" id="restart">디바이스 재시작</button> -->
+    <button class="button" id="idButton" onclick="window.location.reload();">새로 고침</button>
+    
+</body>
+
+</html>

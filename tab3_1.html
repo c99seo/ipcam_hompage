@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <!-- <script src="default.js"></script> -->
+    <SCRIPT>
+        window.onload = function () {
+            console.log("tab3 Page");
+        }
+    </SCRIPT>
+
+    <title>networksetting</title>
+</head>
+
+<body>
+    <div id="note" name="note"></div>
+    <!-- ====================== 3 ======================================================= -->
+    <input type="hidden" name="pageName" value="content3">
+    <br>
+    <div style="font-weight:bold;">* 무선 네트워크 설정</div>
+    
+    <!--  -->
+    <form id="network" name="network">
+        <table width=600>
+            <tr>
+                <td align=center width=180>무선 네트워크 이름</td>
+                <td> <input placeholder="" name="Rssid" id="Rssid" style="width:250px" required></td>
+                <td align=left width=80><button class="button" type="button" id="format">설정</button></td>
+            </tr>
+
+            <tr>
+                <td align=center width=180>비밀번호</td>
+                <td> <input placeholder="" name="Rssid" id="Rssid" style="width:250px" required></td>
+            </tr>
+        </table>
+
+        <br>
+        <div style="font-weight:bold;">* 검색된 무선 네트워크</div>
+
+        <table width=600>
+            <tr>
+                <!-- <td><input id="dhcp1" type="radio" name="dhcp" value="1" onclick="javascript:displayView(this);">
+                    <label for="dhcp1">DHCP 사용함</label>
+                    <input id="dhcp0" type="radio" name="dhcp" value="0" onclick="javascript:displayView(this);">
+                    <label for="dhcp0">DHCP 사용 안함</label></td> -->
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>

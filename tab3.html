@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <!-- <script src="practice.js"></script> -->
+    <SCRIPT>
+        window.onload = function () {
+            console.log("tab3 Page");
+        }
+    </SCRIPT>
+
+    <title>networksetting</title>
+</head>
+
+<body>
+    <div id="note" name="note"></div>
+    <!-- ====================== 3 ======================================================= -->
+    <input type="hidden" name="pageName" value="content3">
+    <br>
+    <div style="font-weight:bold;">* 네트워크 설정</div>
+    <div style="font-weight:bold;">* 기본 설정</div>
+    <!--  -->
+    <form action="./result.html">
+        <table width=600>
+            <tr>
+                <td align=center width=120>DHCP</td>
+                <td> <input name="dhcp" type="text" placeholder="192.168.1.92"  style="width:250px"></td>
+                <td><input type="submit" value="적용"></td>
+            </tr>
+        </table>
+    </form>
+
+    <form action="example2.php">
+        <table width=600>
+            <tr>
+                <td><input id="dhcp1" type="radio" name="dhcp" value="1" onclick="javascript:displayView(this);">
+                    <label for="dhcp1">DHCP 사용함</label>
+                    <input id="dhcp0" type="radio" name="dhcp" value="0" onclick="javascript:displayView(this);">
+                    <label for="dhcp0">DHCP 사용 안함</label></td>
+                    <!-- <td><input type="submit" value="저장"></td> -->
+            </tr>
+        </table>
+    </form>
+    
+    <form>
+
+        <table width=600>
+            <tr>
+                <td align=center width=120>IP 주소</td>
+                <td> <input placeholder="192.168.1.82" name="Rip" id="Rip" required></td>
+            </tr>
+            <tr>
+                <td align=center width=120>서브넷 마스크</td>
+                <td> <input placeholder="255.255.255.0" name="Rsubmk" id="Rsubmk" required></td>
+            </tr>
+            <tr>
+                <td align=center width=120>기본 게이트웨이</td>
+                <td> <input placeholder="192.168.1.1" name="Rgw" id="Rgw" required></td>
+            </tr>
+            <tr>
+                <td align=center width=120>기본 DNS 주소</td>
+                <td> <input placeholder="168.126.63.1" name="Rdns" id="Rdns" required></td>
+            </tr>
+            <tr>
+                <td align=center width=120>보조 DNS 주소</td>
+                <td> <input placeholder="168.126.63.2" name="Rdns" id="Rdns" required></td>
+            </tr>
+            <!-- <tr>
+                <td align=center colspan="2"><button class="button" type="button" id="wifiSaveBt">적용</button></td>
+            </tr> -->
+            <tr>
+                <td align=center colspan="2">
+                    <input type="submit" value="적용">
+                </td>
+            </tr>
+        </table>
+    
+        <br>
+        <div style="font-weight:bold;">* 연결 상태</div>
+        <table width=500>
+            <tr>
+                <td align=center width=120>연결 모드</td>
+                <td align=center width=120>유선</td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>

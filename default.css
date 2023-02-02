@@ -1,0 +1,72 @@
+body {
+    color: #555;
+    background: #eeeeee;
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+th,
+td,
+p,
+input {
+    font: 14px Verdana;
+}
+
+table,
+th,
+td {
+    border: solid 1px #DDD;
+    border-collapse: collapse;
+    padding: 2px 3px;
+}
+
+th {
+    font-weight: bold;
+}
+
+h1 {
+    padding: 20px 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+p {
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+.main {
+    min-width: 500px;
+    max-width: 800px;
+    padding: 50px;
+    margin: 0 auto;
+    background: #eeeeee;
+}
+
+/*라디오버튼 숨김
+    input[type='radio']{
+    display: none;}
+    */
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 0px 0px;
+    font-weight: 200;
+    text-align: center;
+    color: #bbb;
+    border: 0px solid transparent;
+}
+
+label:hover {
+    color: #2e9cdf;
+    cursor: pointer;
+}
+
+/*input 클릭시, label 스타일*/
+input:checked+label {
+    color: #555;
+    border: 0px solid #ddd;
+    border-top: 0px solid #2e9cdf;
+    border-bottom: 1px solid #ffffff;
+}
